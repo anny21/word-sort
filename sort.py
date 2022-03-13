@@ -1,5 +1,6 @@
-"""Importing list of words and paragraphs and
-checking if words exists in paragraphs  """
+"""The find function takes in two parameters:
+ The word path and the paragraph path: and returns the words found in DICT Type
+  and the number of occurrence from the most occurred to least found"""
 
 
 def find(words_path, paragraph_path):
@@ -16,7 +17,8 @@ def find(words_path, paragraph_path):
         if word in paragraphs_content:
             found[word] = paragraphs_content.count(word)
 
-    print(found)
+    print(found.items())
+    print(dict(sorted(found.items(), key=lambda item: item[1], reverse=True)))
 
 
 find("words.txt", "paragraph.txt")
