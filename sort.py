@@ -19,7 +19,7 @@ def find(words_path, paragraph_path):
         if word in paragraphs_content:
             found[word] = paragraphs_content.count(word)
 
-    # print(found.items())
+    print(found.items())
     result = dict(sorted(found.items(), key=lambda item: item[1], reverse=True))
 
     print(result)
@@ -36,6 +36,7 @@ def check_file(words_path, paragraph_path):
     if exists(words_path) and exists(paragraph_path):
         find(words_path, paragraph_path)
     else:
+        print("please enter a valid file path")
         return "Invalid file"
 
 

@@ -14,4 +14,3 @@ class TestSort(unittest.TestCase):
         self.assertTrue(isinstance(result, dict))
 
 
-
